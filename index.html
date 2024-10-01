@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermelada de Fresa - Mermeladas Artesanales</title>
+
+    <!-- Enlace a Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #AB3D6B; /* Color de fondo del encabezado */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .product {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .product h2 {
+            color: #333;
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #555;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            color: #AB3D6B;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background-color: #AB3D6B;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .buy-button:hover {
+            background-color: #8A2E5A;
+        }
+
+        .ingredients, .nutritional-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #AB3D6B;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mermeladas Artesanales</h1>
+    </header>
+
+    <div class="container">
+        <div class="product">
+            <img src="https://tienda.hechoenveracruz.gob.mx/wp-content/uploads/2022/12/TAMARINDO-CON-PERAA-DEMUNER.jpg" alt="Mermelada de Fresa">
+            <h2>Mermelada de Fresa</h2>
+            <p>Deliciosa mermelada elaborada con fresas seleccionadas. Ideal para untar en tus tostadas o disfrutar en postres.</p>
+            <p class="price">$45.00</p>
+            <button class="buy-button">Comprar Ahora</button>
+        </div>
+
+        <div class="ingredients">
+            <h3>Ingredientes</h3>
+            <table>
+                <tr>
+                    <th>Ingrediente</th>
+                </tr>
+                <tr>
+                    <td>Fresas</td>
+                </tr>
+                <tr>
+                    <td>Azúcar</td>
+                </tr>
+                <tr>
+                    <td>Jugo de Limón</td>
+                </tr>
+                <tr>
+                    <td>Conservadores Naturales</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="nutritional-info">
+            <h3>Información Nutricional</h3>
+            <table>
+                <tr>
+                    <th>Porción</th>
+                    <th>Calorías</th>
+                    <th>Grasas Totales</th>
+                    <th>Azúcares</th>
+                </tr>
+                <tr>
+                    <td>1 cucharada (20g)</td>
+                    <td>50 kcal</td>
+                    <td>0 g</td>
+                    <td>12 g</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Mermeladas Artesanales. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
+
