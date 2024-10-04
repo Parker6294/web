@@ -17,7 +17,7 @@
         }
 
         header {
-            background-color: #AB3D6B; /* Color de fondo del encabezado */
+            background-color: #AB3D6B;
             padding: 20px;
             text-align: center;
             color: white;
@@ -84,42 +84,44 @@
             background-color: #8A2E5A;
         }
 
-        .ingredients, .nutritional-info {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        table {
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
         }
 
-        th, td {
-            border: 1px solid #ccc;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
+        .close-btn {
             background-color: #AB3D6B;
             color: white;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
             margin-top: 20px;
         }
 
-        footer p {
-            margin: 0;
+        .close-btn:hover {
+            background-color: #8A2E5A;
         }
+
     </style>
 </head>
 <body>
@@ -135,51 +137,16 @@
             <h2>Mermelada de Fresa</h2>
             <p>Deliciosa mermelada elaborada con fresas seleccionadas. Ideal para untar en tus tostadas o disfrutar en postres.</p>
             <p class="price">$45.00</p>
-            <button class="buy-button" onclick="sinStock()">Comprar Ahora</button>
-            <script>
-                function sinStock() {
-                    alert("Sin stock");
-                }
-            </script>
+            <button class="buy-button" onclick="showModal()">Comprar Ahora</button>
         </div>
+    </div>
 
-        <div class="ingredients">
-            <h3>Ingredientes</h3>
-            <table>
-                <tr>
-                    <th>Ingrediente</th>
-                </tr>
-                <tr>
-                    <td>Fresas</td>
-                </tr>
-                <tr>
-                    <td>Azúcar</td>
-                </tr>
-                <tr>
-                    <td>Jugo de Limón</td>
-                </tr>
-                <tr>
-                    <td>Conservadores Naturales</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="nutritional-info">
-            <h3>Información Nutricional</h3>
-            <table>
-                <tr>
-                    <th>Porción</th>
-                    <th>Calorías</th>
-                    <th>Grasas Totales</th>
-                    <th>Azúcares</th>
-                </tr>
-                <tr>
-                    <td>1 cucharada (20g)</td>
-                    <td>50 kcal</td>
-                    <td>0 g</td>
-                    <td>12 g</td>
-                </tr>
-            </table>
+    <!-- Modal -->
+    <div id="stockModal" class="modal">
+        <div class="modal-content">
+            <h2>Sin stock</h2>
+            <p>Lo sentimos, este producto no está disponible en este momento.</p>
+            <button class="close-btn" onclick="closeModal()">Cerrar</button>
         </div>
     </div>
 
@@ -187,5 +154,26 @@
         <p>© 2024 Mermeladas Artesanales. Todos los derechos reservados.</p>
     </footer>
 
+    <script>
+        // Función para mostrar el modal
+        function showModal() {
+            document.getElementById("stockModal").style.display = "flex";
+        }
+
+        // Función para cerrar el modal
+        function closeModal() {
+            document.getElementById("stockModal").style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera del contenido
+        window.onclick = function(event) {
+            var modal = document.getElementById("stockModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
+
